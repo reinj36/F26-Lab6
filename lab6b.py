@@ -23,10 +23,14 @@ def buildtheSet(divisor):
 
 def s3_or_s5(s3, s5):
 
+    #get differences in values for s3 and s5
     only_s3 = s3.difference(s5)
     only_s5 = s5.difference(s3)
-	
+
+    #find common elements between s3 and s5
     common_set = s3.intersection(s5)
+
+    #join only_s3 and only_s5 and remove common elements
     result_set = (only_s3.union(only_s5)).difference(common_set)
 
     return result_set
