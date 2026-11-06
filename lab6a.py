@@ -13,6 +13,7 @@ def buildtheSet(divisor):
 
     numbers = set()
 
+    #add i to numbers if divisible by divisor
     for i in range(1, 101):
         if i % divisor == 0:
             numbers.add(i)
