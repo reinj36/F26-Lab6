@@ -14,8 +14,8 @@ def buildtheSet(divisor):
     numbers = set()
 
     for i in range(1, 101):
-	    if i % divisor == 0:
-		    numbers.add(i)
+        if i % divisor == 0:
+            numbers.add(i)
     return numbers
 
 def main():
