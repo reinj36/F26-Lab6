@@ -1,8 +1,8 @@
 # Add comments before you do anything else.
 
 #!/usr/bin/env python3
-# Author:
-# Date:
+# Author: Reina James
+# Date: 6/11/2026
 # Purpose: Use Dictionary for Problem solving.
 # Usage: ./lab5f.py
 
