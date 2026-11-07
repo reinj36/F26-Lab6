@@ -20,6 +20,7 @@ def find_movie(database, search_word):
 
     results = []
 
+    #convert search_word to all lower case and movie names to all lower case to find match
     for movie in database:
         if search_word.lower() in movie["name"].lower():
             results.append(movie)
@@ -29,8 +30,15 @@ def find_movie(database, search_word):
 def main():
     movie_database = []
 
+    #add 4 movies
     add_movie(movie_database, "Princess Mononoke", "Hayao Miyazaki", 1997, 133)
+    add_movie(movie_database, "A Miku Who Can't Sing", "Hiroyuki Hata", 2025, 110)
+    add_movie(movie_database, "La La Land", "Damien Chazelle", 2016, 128)
+    add_movie(movie_database, "Project Hail Mary", "Phil Lord, Chris Miller", 2026, 156)
 
-    print(find_movie(movie_database, "pri"))
+    #find two different movies
+    print("First search:", find_movie(movie_database, "miku"))
+    print()
+    print("Second search:", find_movie(movie_database, "hi"))
 
 main()
