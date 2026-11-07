@@ -13,14 +13,20 @@
 
 def add_movie(database, name, director, year, runtime):
 
+    #initialize values with values from method call and append movie to movie database
     movie = {"name":name, "director":director, "year":year, "runtime":runtime}
     database.append(movie)
 
 def main():
     movie_database = []
 
+    #add 4 movies
     add_movie(movie_database, "Princess Mononoke", "Hayao Miyazaki", 1997, 133)
+    add_movie(movie_database, "A Miku Who Can't Sing", "Hiroyuki Hata", 2025, 110)
+    add_movie(movie_database, "La La Land", "Damien Chazelle", 2016, 128)
+    add_movie(movie_database, "Project Hail Mary", "Phil Lord, Chris Miller", 2026, 156)
 
+    #print all movies in database
     for movie in movie_database:
         print(movie)
 
