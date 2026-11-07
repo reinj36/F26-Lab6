@@ -21,15 +21,15 @@ def buildtheSet(divisor):
             numbers.add(i)
     return numbers
 
-def s3_or_s5(s3, s5):
+def s3_and_s5_not_s7(s3, s5, s7):
 
-    only_s3 = s3.difference(s5)
-    only_s5 = s5.difference(s3)
-	
+    #find common elements between s3 and s5
     common_set = s3.intersection(s5)
-    result_set = (only_s3.union(only_s5)).difference(common_set)
 
-    return result_set
+    #find elements in common_set that are not in s7
+    diff_set = common_set.difference(s7)
+
+    return diff_set
 
 def main():
 
@@ -41,7 +41,11 @@ def main():
     print("s5: ", s5)
     print("----------------------------------------")
 
-    new_s3_s5 = s3_or_s5(s3, s5)
+    s7 = buildtheSet(7)
+    print("s7: ", s7)
+    print("----------------------------------------")
+
+    new_s3_s5 = s3_and_s5_not_s7(s3, s5, s7)
 
     print("New set: ", new_s3_s5)
 
